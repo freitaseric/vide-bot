@@ -1,20 +1,13 @@
-import { Command } from "#base";
-import { createRow } from "@magicyan/discord";
-import { ApplicationCommandType, ButtonBuilder, ButtonStyle } from "discord.js";
+import { Command } from '#base'
+import { ApplicationCommandType } from 'discord.js'
+import { $t } from 'i18n/index.js'
 
 new Command({
-	name: "ping",
-	description: "Replies with pong 🏓",
+	name: 'ping',
+	description: "🎈 Replies with bot's latency.",
+	descriptionLocalizations: { 'pt-BR': '🎈 Responde com a latência do bot.' },
 	type: ApplicationCommandType.ChatInput,
-	run(interaction){
-		const row = createRow(
-			// ../../responders/buttons/remind.ts
-			new ButtonBuilder({ 
-				customId: `remind/${new Date().toISOString()}`,
-				label: "Ping",
-				style: ButtonStyle.Success
-			})
-		);
-		interaction.reply({ ephemeral, content: "pong", components: [row] });
-	}
-});
+	async run(interaction) {
+		await interaction.reply($t('commands.ping', interaction))
+	},
+})

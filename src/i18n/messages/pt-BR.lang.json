@@ -1,0 +1,5 @@
+{
+  "commands": {
+    "ping": "## Saudações aventureiro(a)!\nMinha latência atual é de `100ms`!"
+  }
+}

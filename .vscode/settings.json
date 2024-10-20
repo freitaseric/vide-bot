@@ -29,14 +29,16 @@
     "config.json": "Raml",
     "*.lang.json": "i18n",
     "lang.json": "i18n",
-    "gitignore": "Git",
+    "gitignore": "Git"
   },
-  "material-icon-theme.folders.customClones": [{
+  "material-icon-theme.folders.customClones": [
+    {
       "name": "discord",
       "base": "vm",
       "color": "indigo-500",
       "folderNames": ["discord"]
-  }],
+    }
+  ],
   "material-icon-theme.folders.theme": "specific",
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
@@ -52,6 +54,13 @@
     "src/discord/base/**": true,
     "src/settings/global.ts": true,
     "src/settings/error.ts": true,
-    "src/settings/index.ts": true,
+    "src/settings/index.ts": true
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "quickfix.biome": "always"
+    }
+  }
 }

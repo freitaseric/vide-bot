@@ -26,6 +26,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@types/bun": "^1.1.11",
     "@types/node": "^20.16.11"
   },
@@ -54,5 +55,8 @@
     "#lib": [
       "./build/lib/index.js"
     ]
-  }
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
 }
